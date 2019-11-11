@@ -1,14 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Chat
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class='container' padding>
+  <br>  
+  <div class='container'>
+    <p class='texto1'>Selecione uma categoria de chat para entrar:</p>
+    <ion-list>
+      <button ion-item *ngFor='let opcao of opcoes' (click)='opcaoEscolhida($event,opcao)'>
+        {{opcao.categoria}}
+      </button>
+    </ion-list>
+  </div>
 </ion-content>

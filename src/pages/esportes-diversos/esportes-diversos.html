@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Esportes Diversos</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content class='container' padding>
+    <ion-list>
+      <ion-item>
+        <ion-label>Digite seu nome:</ion-label>
+        <ion-input type='text' [(ngModel)]='conversa.nomeUsuario'></ion-input>
+      </ion-item>
+      <ion-item *ngIf='conversa.nomeUsuario'>
+        <ion-textarea class='textarea' type='text' readonly placeholder='{{conversa.nomeUsuario}} disse: {{conversa.comentario}}'></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>Comentário:</ion-label>
+        <ion-textarea type='text' [(ngModel)]='conversa.comentario'></ion-textarea>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  
