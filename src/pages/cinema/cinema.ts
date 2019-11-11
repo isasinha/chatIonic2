@@ -12,6 +12,8 @@ export class CinemaPage {
     comentario: string,
     nomeUsuario: string
   }
+  mensagem = '';
+  historico = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.conversa = {
@@ -22,6 +24,12 @@ export class CinemaPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CinemaPage');
+  }
+
+  enviarMsg(){
+    this.mensagem = this.conversa.nomeUsuario + " disse: " + this.conversa.comentario;
+    this.historico.push(this.mensagem);
+    this.conversa.comentario = ''
   }
 
 }
