@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CinemaPage } from '../cinema/cinema';
-import { EsportesDiversosPage } from '../esportes-diversos/esportes-diversos';
+import { EsportesPage } from '../esportes/esportes';
+import { DiversosPage } from '../diversos/diversos';
 
 @Component({
   selector: 'page-home',
@@ -20,7 +21,8 @@ export class HomePage {
       this.opcaoSelecionada = navParams.get('opcao');
       this.opcoes = [
         {categoria: 'Cinema', endereco: CinemaPage},
-        {categoria: 'Esportes Diversos', endereco: EsportesDiversosPage}
+        {categoria: 'Esportes', endereco: EsportesPage},
+        {categoria: 'Diversos', endereco: DiversosPage}
       ];
 
   }
